@@ -23,23 +23,23 @@ Lastly we will optimize the model to increase accuracy and reach a target of 75%
 
 #### What variable(s) are considered to be the features for your model?
 * features = all other columns e.g. (AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT)
-* 
+
 #### What variable(s) are neither targets nor features, and should be removed from the input data?
-The EIN and NAME variables were determined to be neither targets, nor features and were dropped from the dataset.
+* The EIN and NAME variables were determined to be neither targets, nor features and were dropped from the dataset.
 
 ### Compiling, Training, and Evaluating the Model
 #### How many neurons, layers, and activation functions did you select for your neural network model, and why?
-Initially, we started with 2 hidden layers using "relu" activation funtions followed by one output function using "sigmoid". The first hidden layer had 80 neurons in our orginal model and the second hidden layer had 30 neurons.
+* Initially, we started with 2 hidden layers using "relu" activation funtions followed by one output function using "sigmoid". The first hidden layer had 80 neurons in our orginal model and the second hidden layer had 30 neurons.
 
-To optimize the model, I changed the relu activation functions to tanh activation functions due to the negative values that were contained in our dataset, I figured that the tanh function would work best with those values.
+* To optimize the model, I changed the relu activation functions to tanh activation functions due to the negative values that were contained in our dataset, I figured that the tanh function would work best with those values.
 
-I also increased epochs to 200, adjusted 'other' value cutoffs for binning APPLICATION_TYPE and CLASSIFICATION, changed them back because it made the model less accurate (tried increasing to 10000 and 2500 respectively), added 3rd layer, tried increasing hidden nodes to 100, 50 for two layers but it did not increase accuracy much.
+* I also increased epochs to 200, adjusted 'other' value cutoffs for binning APPLICATION_TYPE and CLASSIFICATION, changed them back because it made the model less accurate (tried increasing to 10000 and 2500 respectively), added 3rd layer, tried increasing hidden nodes to 100, 50 for two layers but it did not increase accuracy much.
 
 ### Were you able to achieve the target model performance?
-No, I was not. The initial performance of the model was 70% accurate, I was able to achieve 73.5% accuracy with the changes I made above.
+* No, I was not. The initial performance of the model was 70% accurate, I was able to achieve 73.5% accuracy with the changes I made above.
 
 ### What steps did you take to try and increase model performance?
-*(from above):* To optimize the model, I changed the relu activation functions to tanh activation functions due to the negative values that were contained in our dataset, I figured that the tanh function would work best with those values.
+* *(from above):* To optimize the model, I changed the relu activation functions to tanh activation functions due to the negative values that were contained in our dataset, I figured that the tanh function would work best with those values.
 
-I also increased epochs to 200, adjusted 'other' value cutoffs for binning APPLICATION_TYPE and CLASSIFICATION, changed them back because it made the model less accurate (tried increasing to 10000 and 2500 respectively), added 3rd layer, tried increasing hidden nodes to 100, 50 for two layers but it did not increase accuracy much.
+* I also increased epochs to 200, adjusted 'other' value cutoffs for binning APPLICATION_TYPE and CLASSIFICATION, changed them back because it made the model less accurate (tried increasing to 10000 and 2500 respectively), added 3rd layer, tried increasing hidden nodes to 100, 50 for two layers but it did not increase accuracy much.
 
